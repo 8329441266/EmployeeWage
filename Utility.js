@@ -5,7 +5,7 @@ class Utility {
     MAX_HRS_IN_MONTH = 100;
     empHrs = 0;
 
-    empAttendance(){
+    empAttendance = () => {
 
         let empCheck = Math.floor(Math.random() * 10) % 2;
             if (empCheck == 1) {
@@ -17,5 +17,11 @@ class Utility {
                 this.empHrs = 0;
            }
     }
+    dailyEmpWage = () =>{
+        this.empAttendance ();
+        let empWage = this.empHrs * this.EMP_RATE_PER_HOUR;
+        console.log('The Daily Eamployee Wage Is : ' +empWage);
+    }
+    
 }
 module.exports = new Utility()
