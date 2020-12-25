@@ -8,6 +8,9 @@ class Utility {
     empHrs = 0;
     empWage = 0;
     totalWage = 0;
+    totalEmpWage = 0;
+    totalEmpHrs = 0;
+    totalWorkingDays = 0;
 
     empCheck = Math.floor(Math.random() * 10) % 3;
 
@@ -69,6 +72,19 @@ class Utility {
                 this.totalWage += this.empWage;
             }
                 console.log('The Monthly Wage Of Employee Is : ' +this.totalWage);  
+    }
+
+    workCondition = () => {
+        
+        while (this.totalEmpHrs <= this.MAX_HRS_IN_MONTH && this.totalWorkingDays < this.NUM_OF_WORKING_DAYS) {
+            this.totalWorkingDays++;
+                
+            this.empSwitchCase();
+                
+            this.totalEmpHrs += this.empHrs;
+        }
+        this.totalEmpWage = this.totalEmpHrs * this.EMP_RATE_PER_HOUR;
+        console.log("\n Employee's Total Days : "+this.totalWorkingDays+" ,Working Hr : "+this.totalEmpHrs+" ,Total Wage Is : "+this.totalEmpWage);  
     }
     
 }
