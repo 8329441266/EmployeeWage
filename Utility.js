@@ -1,11 +1,13 @@
 class Utility {
 
     EMP_RATE_PER_HOUR = 20;
-    NUM_OF_WORKING_DAYS = 25;
+    NUM_OF_WORKING_DAYS = 20;
     MAX_HRS_IN_MONTH = 100;
     IS_PART_TIME = 2;
     IS_FULL_TIME = 1;
     empHrs = 0;
+    empWage = 0;
+    totalWage = 0;
 
     empCheck = Math.floor(Math.random() * 10) % 3;
 
@@ -55,6 +57,18 @@ class Utility {
             default: 
 	            console.log('Employee Is Absent..');
         }
+    }
+
+    monthEmpWage = () => {
+
+        for (let day = 0; day < this.NUM_OF_WORKING_DAYS; day++) {
+        
+                this.empSwitchCase();
+            
+                this.empWage = this.empHrs * this.EMP_RATE_PER_HOUR;
+                this.totalWage += this.empWage;
+            }
+                console.log('The Monthly Wage Of Employee Is : ' +this.totalWage);  
     }
     
 }
