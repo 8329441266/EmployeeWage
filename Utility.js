@@ -7,6 +7,8 @@ class Utility {
     IS_FULL_TIME = 1;
     empHrs = 0;
 
+    empCheck = Math.floor(Math.random() * 10) % 3;
+
     empAttendance = () => {
 
         let empCheck = Math.floor(Math.random() * 10) % 2;
@@ -37,6 +39,22 @@ class Utility {
             this.dailyEmpWage();
         else 
             console.log('Employee Is Absent.');
+    }
+    empSwitchCase = () => {
+
+        switch(this.empCheck) {
+            
+            case this.IS_PART_TIME:
+                this.dailyEmpWage();
+                break;
+            
+                case this.IS_FULL_TIME:
+                this.dailyEmpWage();
+                break;
+            
+            default: 
+	            console.log('Employee Is Absent..');
+        }
     }
     
 }
