@@ -136,6 +136,7 @@ usingArray = () => {
     totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
     console.log("\n * The Daily Wage Of Employee Is : "+empDailyWage);
     console.log("\n * The Monthly Wage Of Employee Is : "+totalEmpWage);
+    console.log(empDailyWage);
 }
 }
 module.exports = new Utility()
