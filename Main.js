@@ -6,3 +6,4 @@ util.empPart_Fullwage();
 util. empSwitchCase();
 util. monthEmpWage();
 util. workCondition();
+util.usingFunction();

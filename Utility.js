@@ -86,6 +86,13 @@ class Utility {
         this.totalEmpWage = this.totalEmpHrs * this.EMP_RATE_PER_HOUR;
         console.log("\n Employee's Total Days : "+this.totalWorkingDays+" ,Working Hr : "+this.totalEmpHrs+" ,Total Wage Is : "+this.totalEmpWage);  
     }
+
+    usingFunction = () => {
+
+        this.empSwitchCase();
+        this.empHrs;
+   this.workCondition ();
+}
     
 }
 module.exports = new Utility()
